@@ -1,9 +1,9 @@
 {
   "name": "food-del-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "food-app",
   "type": "module",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "server": "node app.js"
   },
