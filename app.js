@@ -28,6 +28,7 @@ const connectDB = async () => {
   }
 };
 
+
 // Connect to Database
 connectDB();
 
