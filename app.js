@@ -1,7 +1,7 @@
 import express  from "express"
 import mongoose from "mongoose";
 import cors from 'cors'
-// import  {connectDB} from "./config/db.js"
+import  {connectDB} from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import foodRouter from "./routes/foodRoute.js"
 import 'dotenv/config'
@@ -14,18 +14,19 @@ const port =process.env.PORT || 4000
 
 
 
-const connectDB = async () => {
-  try {
-      const conn = await mongoose.connect(process.env.MONGO_DB, {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-      });
-      console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-      console.error(`Error: ${error.message}`);
-      process.exit(1);
-  }
-};
+
+// const connectDB = async () => {
+//   try {
+//       const conn = await mongoose.connect(process.env.MONGO_DB, {
+//           useNewUrlParser: true,
+//           useUnifiedTopology: true,
+//       });
+//       console.log(`MongoDB Connected: ${conn.connection.host}`);
+//   } catch (error) {
+//       console.error(`Error: ${error.message}`);
+//       process.exit(1);
+//   }
+// };
 
 // Connect to Database
 connectDB();
@@ -48,7 +49,7 @@ app.use("/api/product",searchRouter)
 app.get("/", (req, res) => {
     res.send("API Working")
   });
-  
+
 
 app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
 
