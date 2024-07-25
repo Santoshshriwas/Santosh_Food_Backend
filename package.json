@@ -1,11 +1,12 @@
 {
   "name": "food-del-backend",
   "version": "1.0.0",
-  "description": "food-app",
+  "description": "food app",
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "server": "node app.js"
+    "server": "nodemon app.js",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
